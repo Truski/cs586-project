@@ -3,7 +3,10 @@ public class GasPump1 {
   private MDAEFSM m;
 
   public GasPump1(){
-    d = new DataStore1();
+    AbstractFactory af = new ConcreteFactory1();
+    d = af.getDataStore();
+    m = new MDAEFSM();
+    m.Initialize(af);
   }
 
   public void Activate(float a, float b){

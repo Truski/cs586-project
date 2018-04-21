@@ -10,6 +10,7 @@ public class S0 extends State{
     op.PayMsg();
     op.InitializeData();
     mdaefsm.setM(1);
+    mdaefsm.setState(1);
   }
 
   @Override

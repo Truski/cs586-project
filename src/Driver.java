@@ -1,5 +1,3 @@
-import com.sun.org.apache.xpath.internal.SourceTree;
-
 import java.util.Scanner;
 
 public class Driver {
@@ -14,6 +12,7 @@ public class Driver {
 
     Scanner in = new Scanner(System.in);
     char ch = in.next().charAt(0);
+    in.nextLine();
     if(ch == '1'){
       float a, b;
       String s;
@@ -43,13 +42,16 @@ public class Driver {
         System.out.println("0-Activate,1-Start,2-PayCredit,3-Reject,4-PayDebit,5-Pin,6-Cancel,7-Approved");
         System.out.println("8-Diesel,9-Regular,a-StartPump,b-PumpGallon,c-StopPump,d-FullTank, q-quit");
         ch = in.next().charAt(0);
+        in.nextLine();
         switch(ch){
           case '0': { // Activate
             System.out.println("Operation: Activate(float a, float b)");
             System.out.println("Enter the value of parameter a:");
             a = in.nextFloat();
+            in.nextLine();
             System.out.println("Enter the value of parameter b:");
             b = in.nextFloat();
+            in.nextLine();
             gp1.Activate(a, b);
             break;
           }
@@ -156,15 +158,19 @@ public class Driver {
         System.out.println("0-Activate,1-PayCash,2-PayCredit,3-Approved,4-Reject,5-Cancel,6-Premium,");
         System.out.println("7-Regular,8-Super,9-StartPump,a-PumpLiter,b-Stop,c-Receipt,d-NoReceipt,q-quit");
         ch = in.next().charAt(0);
+        in.nextLine();
         switch (ch) {
           case '0': { // Activate
             System.out.println("Operation: Activate(float a, float b, float c)");
             System.out.println("Enter the value of parameter a:");
             a = in.nextFloat();
+            in.nextLine();
             System.out.println("Enter the value of parameter b:");
             b = in.nextFloat();
+            in.nextLine();
             System.out.println("Enter the value of parameter c:");
             c = in.nextFloat();
+            in.nextLine();
             gp2.Activate(a, b, c);
             break;
           }
@@ -172,6 +178,7 @@ public class Driver {
             System.out.println("Operation: PayCash(int c)");
             System.out.println("Enter value of parameter c:");
             cash = in.nextInt();
+            in.nextLine();
             gp2.PayCash(cash);
             break;
           }

@@ -1,3 +1,3 @@
 public abstract class ReturnCash {
-  public abstract void ReturnCash();
+  public abstract void ReturnCash(DataStore ds);
 }

@@ -52,7 +52,7 @@ public class OutputProcessor {
   }
 
   public void StoreCash() {
-    storeCash.StoreCash();
+    storeCash.StoreCash(ds);
   }
 
   public void DisplayMenu() {
@@ -96,7 +96,7 @@ public class OutputProcessor {
   }
 
   public void ReturnCash() {
-    returnCash.ReturnCash();
+    returnCash.ReturnCash(ds);
   }
 
   public void WrongPinMsg() {

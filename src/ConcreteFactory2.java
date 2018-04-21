@@ -10,91 +10,91 @@ public class ConcreteFactory2 extends AbstractFactory {
 
   @Override
   public StorePrices getStorePrices() {
-    return null;
+    return new StorePrices2();
   }
 
   @Override
   public PayMsg getPayMsg() {
-    return null;
+    return new PayMsg2();
   }
 
   @Override
   public StoreCash getStoreCash() {
-    return null;
+    return new StoreCash2();
   }
 
   @Override
   public DisplayMenu getDisplayMenu() {
-    return null;
+    return new DisplayMenu2();
   }
 
   @Override
   public RejectMsg getRejectMsg() {
-    return null;
+    return new RejectMsg2();
   }
 
   @Override
   public SetPrice getSetPrice() {
-    return null;
+    return new SetPrice2();
   }
 
   @Override
   public ReadyMsg getReadyMsg() {
-    return null;
+    return new ReadyMsg2();
   }
 
   @Override
   public SetInitialValues getSetInitialValues() {
-    return null;
+    return new SetInitialValues2();
   }
 
   @Override
   public PumpGasUnit getPumpGasUnit() {
-    return null;
+    return new PumpGasUnit2();
   }
 
   @Override
   public GasPumpedMsg getGasPumpedMsg() {
-    return null;
+    return new GasPumpedMsg2();
   }
 
   @Override
   public StopMsg getStopMsg() {
-    return null;
+    return new StopMsg2();
   }
 
   @Override
   public PrintReceipt getPrintReceipt() {
-    return null;
+    return new PrintReceipt2();
   }
 
   @Override
   public CancelMsg getCancelMsg() {
-    return null;
+    return new CancelMsg2();
   }
 
   @Override
   public ReturnCash getReturnCash() {
-    return null;
+    return new ReturnCash2();
   }
 
   @Override
   public WrongPinMsg getWrongPinMsg() {
-    return null;
+    return new WrongPinMsg2();
   }
 
   @Override
   public StorePin getStorePin() {
-    return null;
+    return new StorePin2();
   }
 
   @Override
   public EnterPinMsg getEnterPinMsg() {
-    return null;
+    return new EnterPinMsg2();
   }
 
   @Override
   public InitializeData getInitializeData() {
-    return null;
+    return new InitializeData2();
   }
 }

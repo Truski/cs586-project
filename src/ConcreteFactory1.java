@@ -20,7 +20,7 @@ public class ConcreteFactory1 extends AbstractFactory{
 
   @Override
   public StoreCash getStoreCash() {
-    return null;
+    return new StoreCash1();
   }
 
   @Override
@@ -75,7 +75,7 @@ public class ConcreteFactory1 extends AbstractFactory{
 
   @Override
   public ReturnCash getReturnCash() {
-    return null;
+    return new ReturnCash1();
   }
 
   @Override

@@ -24,6 +24,10 @@ public class MDAEFSM {
     }
   }
 
+  public int getM() {
+    return M;
+  }
+
   public void setM(int m) {
     M = m;
   }

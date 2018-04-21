@@ -43,6 +43,7 @@ public class Driver {
         System.out.println("8-Diesel,9-Regular,a-StartPump,b-PumpGallon,c-StopPump,d-FullTank, q-quit");
         ch = in.next().charAt(0);
         in.nextLine();
+        System.out.println();
         switch(ch){
           case '0': { // Activate
             System.out.println("Operation: Activate(float a, float b)");
@@ -71,7 +72,7 @@ public class Driver {
             break;
           }
           case '4': { // PayDebit
-            System.out.println("Operation: PayDebit(string p");
+            System.out.println("Operation: PayDebit(string p)");
             System.out.println("Enter the value of parameter p:");
             s = in.nextLine();
             gp1.PayDebit(s);
@@ -128,6 +129,7 @@ public class Driver {
             break;
           }
         }
+        System.out.println();
       }
     } else if (ch == '2'){
       float a, b, c;
@@ -160,6 +162,8 @@ public class Driver {
         System.out.println("7-Regular,8-Super,9-StartPump,a-PumpLiter,b-Stop,c-Receipt,d-NoReceipt,q-quit");
         ch = in.next().charAt(0);
         in.nextLine();
+
+        System.out.println();
         switch (ch) {
           case '0': { // Activate
             System.out.println("Operation: Activate(float a, float b, float c)");
@@ -247,9 +251,10 @@ public class Driver {
             break;
           }
         }
+        System.out.println();
       }
     } else {
-      System.out.println("Please enter 1 or 2.");
+      System.out.println("Please enter 1 or 2. Exiting.");
       in.nextLine();
     }
   }

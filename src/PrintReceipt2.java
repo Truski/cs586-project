@@ -3,6 +3,6 @@ public class PrintReceipt2 extends PrintReceipt {
   public void PrintReceipt(DataStore ds) {
     System.out.println("RECEIPT");
     System.out.println("# OF LITERS: " + ds.get_L());
-    System.out.println("Total: $" + ds.get_total());
+    System.out.println(String.format("Total: $%.2f", ds.get_total()));
   }
 }

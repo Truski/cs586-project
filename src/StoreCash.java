@@ -1,2 +1,3 @@
-public class StoreCash {
+public abstract class StoreCash {
+  public abstract void StoreCash();
 }

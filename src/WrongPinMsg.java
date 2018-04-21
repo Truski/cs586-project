@@ -1,2 +1,3 @@
-public class WrongPinMsg {
+public abstract class WrongPinMsg {
+  public abstract void WrongPinMsg();
 }

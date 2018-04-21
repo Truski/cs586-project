@@ -1,3 +1,3 @@
-public class RejectMsg {
-
+public abstract class RejectMsg {
+  public abstract void RejectMsg();
 }

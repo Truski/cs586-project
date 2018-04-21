@@ -1,2 +1,3 @@
-public class GasPumpedMsg {
+public abstract class GasPumpedMsg {
+  public abstract void GasPumpedMsg();
 }

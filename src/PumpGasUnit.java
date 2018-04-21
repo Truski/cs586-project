@@ -1,2 +1,3 @@
-public class PumpGasUnit {
+public abstract class PumpGasUnit {
+  public abstract void PumpGasUnit();
 }

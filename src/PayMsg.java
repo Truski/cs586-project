@@ -1,2 +1,3 @@
-public class PayMsg {
+public abstract class PayMsg {
+  public abstract void PayMsg();
 }

@@ -1,2 +1,3 @@
-public class StopMsg {
+public abstract class StopMsg {
+  public abstract void StopMsg();
 }

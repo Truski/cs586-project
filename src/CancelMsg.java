@@ -1,2 +1,3 @@
-public class CancelMsg {
+public abstract class CancelMsg {
+  public abstract void CancelMsg();
 }

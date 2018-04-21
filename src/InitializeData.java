@@ -1,2 +1,3 @@
-public class InitializeData {
+public abstract class InitializeData {
+  public abstract void InitializeData();
 }

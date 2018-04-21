@@ -1,7 +1,8 @@
 public class S7 extends State{
   @Override
   public void Activate() {
-
+    op.StorePrices();
+    mdaefsm.setState(0);
   }
 
   @Override

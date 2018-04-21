@@ -16,7 +16,8 @@ public class S2 extends State{
 
   @Override
   public void Reject() {
-
+    op.RejectMsg();
+    mdaefsm.setState(0);
   }
 
   @Override
@@ -26,7 +27,8 @@ public class S2 extends State{
 
   @Override
   public void Approved() {
-
+    op.DisplayMenu();
+    mdaefsm.setState(3);
   }
 
   @Override

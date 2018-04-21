@@ -61,12 +61,14 @@ public class S8 extends State{
 
   @Override
   public void CorrectPin() {
-
+    op.DisplayMenu();
+    mdaefsm.setState(3);
   }
 
   @Override
   public void IncorrectPin() {
-
+    op.WrongPinMsg();
+    mdaefsm.setState(0);
   }
 
   @Override

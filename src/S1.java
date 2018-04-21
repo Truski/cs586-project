@@ -11,7 +11,18 @@ public class S1 extends State{
 
   @Override
   public void PayType(int t) {
-
+    if(t == 1){
+      mdaefsm.setState(2);
+    } else if (t == 2) {
+      op.StoreCash();
+      op.DisplayMenu();
+      mdaefsm.setM(0);
+      mdaefsm.setState(3);
+    } else if (t == 3) {
+      op.EnterPinMsg();
+      op.StorePin();
+      mdaefsm.setState(8);
+    }
   }
 
   @Override

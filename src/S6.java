@@ -51,12 +51,15 @@ public class S6 extends State{
 
   @Override
   public void Receipt() {
-
+    op.PrintReceipt();
+    op.ReturnCash();
+    mdaefsm.setState(0);
   }
 
   @Override
   public void NoReceipt() {
-
+    op.ReturnCash();
+    mdaefsm.setState(0);
   }
 
   @Override

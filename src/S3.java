@@ -21,7 +21,9 @@ public class S3 extends State{
 
   @Override
   public void Cancel() {
-
+    op.CancelMsg();
+    op.ReturnCash();
+    mdaefsm.setState(0);
   }
 
   @Override
@@ -46,7 +48,7 @@ public class S3 extends State{
 
   @Override
   public void SelectGas(int g) {
-
+    op.SetPrice(g, mdaefsm.getM());
   }
 
   @Override
@@ -71,6 +73,6 @@ public class S3 extends State{
 
   @Override
   public void Continue() {
-
+    mdaefsm.setState(4);
   }
 }

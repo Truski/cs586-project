@@ -9,7 +9,7 @@ public class S0 extends State{
   public void Start() {
     op.PayMsg();
     op.InitializeData();
-
+    mdaefsm.setM(1);
   }
 
   @Override

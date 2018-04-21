@@ -31,7 +31,9 @@ public class S4 extends State{
 
   @Override
   public void StartPump() {
-
+    op.SetInitialValues();
+    op.ReadyMsg();
+    mdaefsm.setState(5);
   }
 
   @Override

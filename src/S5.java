@@ -36,12 +36,14 @@ public class S5 extends State{
 
   @Override
   public void Pump() {
-
+    op.PumpGasUnit();
+    op.GasPumpedMsg();
   }
 
   @Override
   public void StopPump() {
-
+    op.StopMsg();
+    mdaefsm.setState(6);
   }
 
   @Override

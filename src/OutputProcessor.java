@@ -27,4 +27,68 @@ public class OutputProcessor {
   public void PayMsg() {
     payMsg.PayMsg();
   }
+
+  public void StoreCash() {
+    storeCash.StoreCash();
+  }
+
+  public void DisplayMenu() {
+    displayMenu.DisplayMenu();
+  }
+
+  public void RejectMsg() {
+    rejectMsg.RejectMsg();
+  }
+
+  public void SetPrice(int g, int M){
+    setPrice.SetPrice(g, M);
+  }
+
+  public void ReadyMsg(){
+    readyMsg.ReadyMsg();
+  }
+
+  public void SetInitialValues(){
+    setInitialValues.SetInitialValues();
+  }
+
+  public void PumpGasUnit(){
+    pumpGasUnit.PumpGasUnit();
+  }
+
+  public void GasPumpedMsg() {
+    gasPumpedMsg.GasPumpedMsg();
+  }
+
+  public void StopMsg() {
+    stopMsg.StopMsg();
+  }
+
+  public void PrintReceipt() {
+    printReceipt.PrintReceipt();
+  }
+
+  public void CancelMsg() {
+    cancelMsg.CancelMsg();
+  }
+
+  public void ReturnCash() {
+    returnCash.ReturnCash();
+  }
+
+  public void WrongPinMsg() {
+    wrongPinMsg.WrongPinMsg();
+  }
+
+  public void StorePin() {
+    storePin.StorePin();
+  }
+
+  public void EnterPinMsg() {
+    enterPinMsg.EnterPinMsg();
+  }
+
+  public void InitializeData() {
+    initializeData.InitializeData();
+  }
 }

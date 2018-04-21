@@ -1,3 +1,3 @@
 public abstract class GasPumpedMsg {
-  public abstract void GasPumpedMsg();
+  public abstract void GasPumpedMsg(DataStore ds);
 }

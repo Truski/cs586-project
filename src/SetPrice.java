@@ -1,3 +1,3 @@
 public abstract class SetPrice {
-  public abstract void SetPrice(int g, int M);
+  public abstract void SetPrice(DataStore ds, int g, int M);
 }

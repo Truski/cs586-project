@@ -64,7 +64,7 @@ public class OutputProcessor {
   }
 
   public void SetPrice(int g, int M){
-    setPrice.SetPrice(g, M);
+    setPrice.SetPrice(ds, g, M);
   }
 
   public void ReadyMsg(){
@@ -72,15 +72,15 @@ public class OutputProcessor {
   }
 
   public void SetInitialValues(){
-    setInitialValues.SetInitialValues();
+    setInitialValues.SetInitialValues(ds);
   }
 
   public void PumpGasUnit(){
-    pumpGasUnit.PumpGasUnit();
+    pumpGasUnit.PumpGasUnit(ds);
   }
 
   public void GasPumpedMsg() {
-    gasPumpedMsg.GasPumpedMsg();
+    gasPumpedMsg.GasPumpedMsg(ds);
   }
 
   public void StopMsg() {
@@ -88,7 +88,7 @@ public class OutputProcessor {
   }
 
   public void PrintReceipt() {
-    printReceipt.PrintReceipt();
+    printReceipt.PrintReceipt(ds);
   }
 
   public void CancelMsg() {
@@ -104,7 +104,7 @@ public class OutputProcessor {
   }
 
   public void StorePin() {
-    storePin.StorePin();
+    storePin.StorePin(ds);
   }
 
   public void EnterPinMsg() {
@@ -112,6 +112,6 @@ public class OutputProcessor {
   }
 
   public void InitializeData() {
-    initializeData.InitializeData();
+    initializeData.InitializeData(ds);
   }
 }

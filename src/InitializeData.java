@@ -1,3 +1,3 @@
 public abstract class InitializeData {
-  public abstract void InitializeData();
+  public abstract void InitializeData(DataStore ds);
 }

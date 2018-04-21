@@ -1,3 +1,3 @@
 public abstract class PumpGasUnit {
-  public abstract void PumpGasUnit();
+  public abstract void PumpGasUnit(DataStore ds);
 }

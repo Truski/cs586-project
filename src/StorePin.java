@@ -1,3 +1,3 @@
 public abstract class StorePin {
-  public abstract void StorePin();
+  public abstract void StorePin(DataStore ds);
 }

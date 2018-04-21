@@ -24,6 +24,10 @@ public class MDAEFSM {
     }
   }
 
+  public void setM(int m) {
+    M = m;
+  }
+
   public void Activate(){
     state.Activate();
   }

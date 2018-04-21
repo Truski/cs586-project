@@ -1,6 +1,6 @@
 public class GasPump1 {
-  DataStore d;
-  MDAEFSM m;
+  private DataStore d;
+  private MDAEFSM m;
 
   public GasPump1(){
     d = new DataStore1();

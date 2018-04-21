@@ -1,5 +1,5 @@
 public abstract class AbstractFactory {
-  protected DataStore dataStore;
+  DataStore dataStore;
 
   public abstract DataStore getDataStore();
 

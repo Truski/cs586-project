@@ -20,8 +20,31 @@ public class OutputProcessor {
   private EnterPinMsg enterPinMsg;
   private InitializeData initializeData;
 
+  public void Initialize(AbstractFactory af){
+    ds = af.getDataStore();
+
+    storePrices = af.getStorePrices();
+    payMsg = af.getPayMsg();
+    storeCash = af.getStoreCash();
+    displayMenu = af.getDisplayMenu();
+    rejectMsg = af.getRejectMsg();
+    setPrice = af.getSetPrice();
+    readyMsg = af.getReadyMsg();
+    setInitialValues = af.getSetInitialValues();
+    pumpGasUnit = af.getPumpGasUnit();
+    gasPumpedMsg = af.getGasPumpedMsg();
+    stopMsg = af.getStopMsg();
+    printReceipt = af.getPrintReceipt();
+    cancelMsg = af.getCancelMsg();
+    returnCash = af.getReturnCash();
+    wrongPinMsg = af.getWrongPinMsg();
+    storePin = af.getStorePin();
+    enterPinMsg = af.getEnterPinMsg();
+    initializeData = af.getInitializeData();
+  }
+
   public void StorePrices() {
-    storePrices.StorePrices();
+    storePrices.StorePrices(ds);
   }
 
   public void PayMsg() {

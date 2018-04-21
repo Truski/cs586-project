@@ -1,4 +1,7 @@
 public abstract class State {
+  OutputProcessor op;
+  MDAEFSM mdaefsm;
+
   public abstract void Activate();
   public abstract void Start();
   public abstract void PayType(int t);
@@ -14,4 +17,12 @@ public abstract class State {
   public abstract void CorrectPin();
   public abstract void IncorrectPin();
   public abstract void Continue();
+
+  public void setOP(OutputProcessor op){
+    this.op = op;
+  }
+
+  public void setMDAEFSM(MDAEFSM mdaefsm){
+    this.mdaefsm = mdaefsm;
+  }
 }

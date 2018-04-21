@@ -1,4 +1,5 @@
 public class S0 extends State{
+
   @Override
   public void Activate() {
 
@@ -6,6 +7,8 @@ public class S0 extends State{
 
   @Override
   public void Start() {
+    op.PayMsg();
+    op.InitializeData();
 
   }
 

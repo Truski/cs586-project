@@ -1,9 +1,11 @@
 public class MDAEFSM {
-  private OutputProcessor op;
   private State[] states;
   private State state;
   private int M;
-  public MDAEFSM(){
+
+  public void Initialize(AbstractFactory af) {
+    OutputProcessor op = new OutputProcessor();
+    op.Initialize(af);
     states = new State[9];
     states[0] = new S0();
     states[1] = new S1();
@@ -15,6 +17,11 @@ public class MDAEFSM {
     states[7] = new S7();
     states[8] = new S8();
     state = states[0];
+
+    for (State s : states) {
+      s.setMDAEFSM(this);
+      s.setOP(op);
+    }
   }
 
   public void Activate(){

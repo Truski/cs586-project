@@ -109,7 +109,7 @@ public class Driver {
           }
           case 'b': { // PumpGallon
             System.out.println("Operation: PumpGallon()");
-            gp1.PumpGallong();
+            gp1.PumpGallon();
             break;
           }
           case 'c': { // StopPump

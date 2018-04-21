@@ -1,6 +1,7 @@
 public class MDAEFSM {
   private OutputProcessor op;
   private State[] states;
+  private State state;
   private int M;
   public MDAEFSM(){
     states = new State[9];
@@ -13,5 +14,70 @@ public class MDAEFSM {
     states[6] = new S6();
     states[7] = new S7();
     states[8] = new S8();
+    state = states[0];
+  }
+
+  public void Activate(){
+    state.Activate();
+  }
+
+  public void Start(){
+    state.Start();
+  }
+
+  public void PayType(int t){
+    state.PayType(t);
+  }
+
+  public void Reject(){
+    state.Reject();
+  }
+
+  public void Cancel(){
+    state.Cancel();
+  }
+
+  public void Approved(){
+    state.Approved();
+  }
+
+  public void StartPump(){
+    state.StartPump();
+  }
+
+  public void Pump(){
+    state.Pump();
+  }
+
+  public void StopPump(){
+    state.StopPump();
+  }
+
+  public void SelectGas(int g){
+    state.SelectGas(g);
+  }
+
+  public void Receipt(){
+    state.Receipt();
+  }
+
+  public void NoReceipt(){
+    state.NoReceipt();
+  }
+
+  public void CorrectPin(){
+    state.CorrectPin();
+  }
+
+  public void IncorrectPin(){
+    state.IncorrectPin();
+  }
+
+  public void Continue(){
+    state.Continue();
+  }
+
+  public void setState(int s){
+    state = states[s];
   }
 }

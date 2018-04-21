@@ -16,7 +16,7 @@ public class MDAEFSM {
     states[6] = new S6();
     states[7] = new S7();
     states[8] = new S8();
-    state = states[0];
+    state = states[7];
 
     for (State s : states) {
       s.setMDAEFSM(this);

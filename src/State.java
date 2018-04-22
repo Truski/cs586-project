@@ -1,3 +1,8 @@
+/*
+  (State Pattern) The abstract base class. It has a reference to the output processor
+  to perform actions, as well as the MDAEFSM to change states and refer to data
+  (since it is decentralized solution)
+ */
 public abstract class State {
   OutputProcessor op;
   MDAEFSM mdaefsm;

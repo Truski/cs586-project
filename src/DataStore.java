@@ -1,3 +1,9 @@
+/*
+  The abstract base class for Data Stores used across the system.
+  Abstract Factory Pattern creates the proper Data Stores for the respective
+  GasPump system.
+ */
+
 public abstract class DataStore {
   public abstract float get_temp_a();
   public abstract void set_temp_a(float x);

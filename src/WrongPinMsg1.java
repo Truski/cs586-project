@@ -1,5 +1,5 @@
 /*
-  (Strategy Pattern) Strategy containing the implementation for GasPump1's WrongPinMsg action.
+  (Strategy Pattern) (Also a product in Abstract Factory Pattern) Strategy containing the implementation for GasPump1's WrongPinMsg action.
  */
 public class WrongPinMsg1 extends WrongPinMsg {
   @Override

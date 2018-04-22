@@ -1,5 +1,5 @@
 /*
-  (Strategy Pattern) Strategy containing the implementation for GasPump2's EnterPinMsg action.
+  (Strategy Pattern) (Also a product in Abstract Factory Pattern) Strategy containing the implementation for GasPump2's EnterPinMsg action.
  */
 public class EnterPinMsg2 extends EnterPinMsg {
   @Override

@@ -1,5 +1,5 @@
 /*
-  (Strategy Pattern) Strategy containing the implementation for GasPump2's PrintReceipt action.
+  (Strategy Pattern) (Also a product in Abstract Factory Pattern) Strategy containing the implementation for GasPump2's PrintReceipt action.
  */
 public class PrintReceipt2 extends PrintReceipt {
   @Override

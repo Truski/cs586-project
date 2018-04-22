@@ -1,5 +1,5 @@
 /*
-  (Strategy Pattern) Strategy containing the implementation for GasPump1's StorePin action.
+  (Strategy Pattern) (Also a product in Abstract Factory Pattern) Strategy containing the implementation for GasPump1's StorePin action.
  */
 public class StorePin1 extends StorePin{
 

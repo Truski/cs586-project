@@ -1,5 +1,5 @@
 /*
-  (Strategy Pattern) Strategy containing the implementation for GasPump1's DisplayMenu action.
+  (Strategy Pattern) (Also a product in Abstract Factory Pattern) Strategy containing the implementation for GasPump1's DisplayMenu action.
  */
 public class DisplayMenu1 extends DisplayMenu {
   @Override

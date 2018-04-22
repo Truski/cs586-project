@@ -1,5 +1,5 @@
 /*
-  (Strategy Pattern) Strategy containing the implementation for GasPump1's StopMsg action.
+  (Strategy Pattern) (Also a product in Abstract Factory Pattern) Strategy containing the implementation for GasPump1's StopMsg action.
  */
 public class StopMsg1 extends StopMsg {
   @Override

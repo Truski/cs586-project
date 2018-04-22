@@ -1,5 +1,5 @@
 /*
-  (Strategy Pattern) Strategy containing the implementation for GasPump2's ReturnCash action.
+  (Strategy Pattern) (Also a product in Abstract Factory Pattern) Strategy containing the implementation for GasPump2's ReturnCash action.
  */
 public class ReturnCash2 extends ReturnCash {
   @Override

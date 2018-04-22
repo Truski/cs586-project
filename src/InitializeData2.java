@@ -1,5 +1,5 @@
 /*
-  (Strategy Pattern) Strategy containing the implementation for GasPump2's InitializeData action.
+  (Strategy Pattern) (Also a product in Abstract Factory Pattern) Strategy containing the implementation for GasPump2's InitializeData action.
  */
 public class InitializeData2 extends InitializeData {
   @Override

@@ -1,5 +1,7 @@
-import java.io.Serializable;
-
+/*
+  An actual DataStore for GasPump1 that contains fields and only implements methods (getters and setters) that
+  are used by GasPump1. (this is a product of the Abstract Factory Pattern)
+ */
 public class DataStore1 extends DataStore {
   private float temp_a;
   private float temp_b;

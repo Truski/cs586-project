@@ -1,5 +1,5 @@
 /*
-  (Strategy Pattern) Strategy containing the implementation for GasPump2's SetPrice action.
+  (Strategy Pattern) (Also a product in Abstract Factory Pattern) Strategy containing the implementation for GasPump2's SetPrice action.
  */
 public class SetPrice2 extends SetPrice {
   @Override

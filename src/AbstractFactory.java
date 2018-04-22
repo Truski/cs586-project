@@ -1,5 +1,5 @@
 /*
-  (Abstract Factory) This class is the abstract part of the abstract factory pattern
+  (Abstract Factory Pattern) This class is the abstract part of the abstract factory pattern
   Regardless of the underlying Concrete Factory, an Abstract Factory
   can be passed around and its products created
  */

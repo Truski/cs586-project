@@ -1,3 +1,7 @@
+/*
+  (Abstract Factory Pattern) This class represents the Concrete Factory for GasPump2. It returns
+  products (actions) that are GasPump2's versions. It also creates a DataStore2 if it has't been created before.
+ */
 public class ConcreteFactory2 extends AbstractFactory {
   @Override
   public DataStore getDataStore() {

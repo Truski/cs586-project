@@ -1,5 +1,5 @@
 /*
-  (Strategy Pattern) Strategy containing the implementation for GasPump2's GasPumpedMsg action.
+  (Strategy Pattern) (Also a product in Abstract Factory Pattern) Strategy containing the implementation for GasPump2's GasPumpedMsg action.
  */
 public class GasPumpedMsg2 extends GasPumpedMsg {
   @Override

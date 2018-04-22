@@ -1,5 +1,5 @@
 /*
-  (Strategy Pattern) Strategy containing the implementation for GasPump2's SetInitialValues action.
+  (Strategy Pattern) (Also a product in Abstract Factory Pattern) Strategy containing the implementation for GasPump2's SetInitialValues action.
  */
 public class SetInitialValues2 extends SetInitialValues {
   @Override

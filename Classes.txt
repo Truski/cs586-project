@@ -1,0 +1,146 @@
+Deliverable #2: Class responsibilities and operations
+
+AbstractFactory
+Creates the appropriate strategies and Data Store
+
+Operations:
+- getDataStore: Returns the appropriate data store (based on which concrete factory is created).
+If the datastore hasn't been created yet, it will be made here.
+- CreateStrategyX: For each X-named Strategy, returns the appropriate strategy object depending on concrete factory
+
+ConcreteFactory1
+Creates strategies(actions) and data store for GasPump1
+
+Operations:
+- getDataStore: Returns the DataStore1 (creates it first if doesn't exist)
+- CreateStrategyX: For each X-namedStrategy, returns the action that GasPump1 takes in its OutputProcessor
+
+ConcreteFactory1
+Creates strategies(actions) and data store for GasPump2
+
+Operations:
+- getDataStore: Returns the DataStore2 (creates it first if doesn't exist)
+- CreateStrategyX: For each X-namedStrategy, returns the action that GasPump2 takes in its OutputProcessor
+
+DataStore
+The abstract DataStore class that has abstract methods for getting and setting all possible variables
+
+Operations:
+- get_data_X: For each data field X, returns the value of X
+- set_data_X: For each data field X, allows the user to set the value of X
+
+DataStore1
+The concrete DataStore for GasPump1, containing all required data fields
+
+Operations:
+- get_data_X: For each data field X, returns the value of X. X values that DataStore1 does not have are not implemented
+- set_data_X: For each data field X, allows the user to set the value of X. X values that DataStore1 does not have are not implemented
+
+DataStore2
+The concrete DataStore for GasPump2, containing all required data fields
+
+Operations:
+- get_data_X: For each data field X, returns the value of X. X values that DataStore2 does not have are not implemented
+- set_data_X: For each data field X, allows the user to set the value of X. X values that DataStore2 does not have are not implemented
+
+Driver
+This class is responsible for the Main Method. It allows the user to select the gas pump and enter commands and parameters
+
+Operations:
+- main: The entry point for the software system
+
+MDAEFSM:
+The Platform Independent Model in the MDA. Contains the state pattern (states and current state) and the data M (for determining prices)
+
+Operations:
+- getM, setM: Getters and setters for M
+- Initialize: Initializes the state machine by creating the states, setting the initial state, and initializing the output processor with the abstract factory
+- setState: allows state classes to change the state of the mdaefsm (decentralized state pattern)
+- Activate, Start, PayType, and the remaining operations: These are the meta events for the MDAEFSM, and they are forwarded to the current state
+
+OutputProcessor:
+This class is the OP of the Model Driven Architecture. It is initialized via an abstract factory that returns the appropriate strategies. States have access to the OP and can call its actions
+
+Operations:
+- Initialize: Initializes the OP by calling all of the Factory's CreateStrategyX methods, and gets the Data Store used by the system
+- StorePrices, PayMsg, StoreCash, and the remaining operations: these are the meta actions, and forward the call to the strategy initialized
+- StorePrices // stores price(s) for the gas from the temporary data store
+- PayMsg // displays a type of payment method
+- StoreCash // stores cash from the temporary data store
+- DisplayMenu // display a menu with a list of selections
+- RejectMsg // displays credit card not approved message
+- SetPrice(int g, int M) // set the price for the gas identified by g identifier as in SelectGas(int g); if M=1, the price may be increased
+- ReadyMsg // displays the ready for pumping message
+- SetInitialValues // set G (or L) and total to 0;
+- PumpGasUnit // disposes unit of gas and counts # of units disposed
+- GasPumpedMsg // displays the amount of disposed gas
+- StopMsg // stop pump message and receipt? msg (optionally)
+- PrintReceipt // print a receipt
+- CancelMsg // displays a cancellation message
+- ReturnCash // returns the remaining cash
+- WrongPinMsg // displays incorrect pin message
+- StorePin // stores the pin from the temporary data store
+- EnterPinMsg // displays a message to enter pin
+- InitializeData // set the value of price and cash to 0
+
+State
+The abstract class for states in the state pattern. Has pointer to the OP for states to call actions and MDAEFSM to change state and change platform independent data (M)
+
+Operations:
+- setOP: Sets the OP pointer during initialization
+- setMDAEFSM: Sets the MDAEFSM pointer during initialization
+- Activate, Start, PayType, and the other operations: Events that the states can receive and respond to
+
+Classes S0 through S8
+These are the concrete states in the State pattern. They all override the abstract events in State. Based on the Platform Independent Model (MDAEFSM diagram), these states will call actions to occur and change the MDAEFSM's state
+
+Operations:
+- Activate, Start, PayType, and the other operations: Events that the states can receive and respond to
+
+The remaining classes (Strategies)
+Each strategy has 3 classes: 1 abstract class with one abstract method, and 2 classes that override the implementation (1 for each gas pump)
+Since in my design, both gas pumps has their own versions of menus and messages, there were 3 classes for each strategy instead of just 2 (sharing)
+The abstract strategies allow us to easily add new gas pumps and their implementations of actions. They are called via the output processor
+The concrete strategies are created based on the Concrete Factory in the Abstract Factory Pattern
+
+Here is a list of the strategies and their description of their operation:
+
+Initialize: Initializes the OP by calling all of the Factory's CreateStrategyX methods, and gets the Data Store used by the system
+
+StorePrices, PayMsg, StoreCash, and the remaining operations: these are the meta actions, and forward the call to the strategy initialized
+
+StorePrices // stores price(s) for the gas from the temporary data store
+
+PayMsg // displays a type of payment method
+
+StoreCash // stores cash from the temporary data store
+
+DisplayMenu // display a menu with a list of selections
+
+RejectMsg // displays credit card not approved message
+
+SetPrice(int g, int M) // set the price for the gas identified by g identifier as in SelectGas(int g); if M=1, the price may be increased
+
+ReadyMsg // displays the ready for pumping message
+
+SetInitialValues // set G (or L) and total to 0;
+
+PumpGasUnit // disposes unit of gas and counts # of units disposed
+
+GasPumpedMsg // displays the amount of disposed gas
+
+StopMsg // stop pump message and receipt? msg (optionally)
+
+PrintReceipt // print a receipt
+
+CancelMsg // displays a cancellation message
+
+ReturnCash // returns the remaining cash
+
+WrongPinMsg // displays incorrect pin message
+
+StorePin // stores the pin from the temporary data store
+
+EnterPinMsg // displays a message to enter pin
+
+InitializeData // set the value of price and cash to 0

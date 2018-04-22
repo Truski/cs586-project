@@ -1,3 +1,8 @@
+/*
+  The OutputProcessor of the MDA Architecture. Contains all the strategies that may be different
+  for each GasPump (Strategy Pattern) and is initialized by the Abstract Factory Pattern. States call
+  the OP's methods
+ */
 public class OutputProcessor {
   private DataStore ds;
 

@@ -1,5 +1,8 @@
 import java.util.Scanner;
-
+/*
+  The Driver class is responsible for creating a user interface, inputting parameters, and letting the user
+  choose which GasPump they want to use.
+ */
 public class Driver {
   public static void main(String[] args) {
 

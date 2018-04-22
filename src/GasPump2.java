@@ -1,3 +1,8 @@
+/*
+  This class represents the PlatForm Specific Model for GasPump2. In initialization via the constructor, it creates
+  a Concrete Factory 2, part of the Abstract Factory Pattern, so that it could initialize the MDAEFSM's OP and
+  get the data store. Contains methods that are called by the driver program.
+ */
 public class GasPump2 {
   private DataStore d;
   private MDAEFSM m;

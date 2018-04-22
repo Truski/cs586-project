@@ -1,3 +1,7 @@
+/*
+  (State Pattern) This is the Context class for the state pattern, and the PIM of the MDAEFSM architecture.
+  states is an array of states the MDAFESM can be in, and state is the current state
+ */
 public class MDAEFSM {
   private State[] states;
   private State state;

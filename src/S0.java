@@ -1,3 +1,6 @@
+/*
+  (State Pattern) Concrete state for S0 in the MDAEFSM State Machine
+*/
 public class S0 extends State{
 
   @Override

@@ -1,3 +1,6 @@
+/*
+  (State Pattern) Concrete state for S6 in the MDAEFSM State Machine
+*/
 public class S6 extends State{
   @Override
   public void Activate() {

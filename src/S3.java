@@ -1,3 +1,6 @@
+/*
+  (State Pattern) Concrete state for S3 in the MDAEFSM State Machine
+*/
 public class S3 extends State{
   @Override
   public void Activate() {

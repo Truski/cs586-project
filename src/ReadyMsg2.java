@@ -1,3 +1,6 @@
+/*
+  (Strategy Pattern) Strategy containing the implementation for GasPump2's ReadyMsg action.
+ */
 public class ReadyMsg2 extends ReadyMsg {
   @Override
   public void ReadyMsg() {

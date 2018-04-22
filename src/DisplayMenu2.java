@@ -1,3 +1,6 @@
+/*
+  (Strategy Pattern) Strategy containing the implementation for GasPump2's DisplayMenu action.
+ */
 public class DisplayMenu2 extends DisplayMenu {
   @Override
   public void DisplayMenu() {

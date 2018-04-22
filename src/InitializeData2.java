@@ -1,3 +1,6 @@
+/*
+  (Strategy Pattern) Strategy containing the implementation for GasPump2's InitializeData action.
+ */
 public class InitializeData2 extends InitializeData {
   @Override
   public void InitializeData(DataStore ds) {

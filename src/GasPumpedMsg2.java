@@ -1,3 +1,6 @@
+/*
+  (Strategy Pattern) Strategy containing the implementation for GasPump2's GasPumpedMsg action.
+ */
 public class GasPumpedMsg2 extends GasPumpedMsg {
   @Override
   public void GasPumpedMsg(DataStore ds) {

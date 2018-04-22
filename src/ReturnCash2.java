@@ -1,3 +1,6 @@
+/*
+  (Strategy Pattern) Strategy containing the implementation for GasPump2's ReturnCash action.
+ */
 public class ReturnCash2 extends ReturnCash {
   @Override
   public void ReturnCash(DataStore ds) {

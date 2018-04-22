@@ -1,3 +1,6 @@
+/*
+  (Strategy Pattern) Strategy containing the implementation for GasPump2's StopMsg action.
+ */
 public class StopMsg2 extends StopMsg {
   @Override
   public void StopMsg() {

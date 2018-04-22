@@ -1,3 +1,6 @@
+/*
+  (Strategy Pattern) Strategy containing the implementation for GasPump2's PrintReceipt action.
+ */
 public class PrintReceipt2 extends PrintReceipt {
   @Override
   public void PrintReceipt(DataStore ds) {

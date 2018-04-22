@@ -9,92 +9,92 @@ public class ConcreteFactory2 extends AbstractFactory {
   }
 
   @Override
-  public StorePrices getStorePrices() {
+  public StorePrices CreateStorePrices() {
     return new StorePrices2();
   }
 
   @Override
-  public PayMsg getPayMsg() {
+  public PayMsg CreatePayMsg() {
     return new PayMsg2();
   }
 
   @Override
-  public StoreCash getStoreCash() {
+  public StoreCash CreateStoreCash() {
     return new StoreCash2();
   }
 
   @Override
-  public DisplayMenu getDisplayMenu() {
+  public DisplayMenu CreateDisplayMenu() {
     return new DisplayMenu2();
   }
 
   @Override
-  public RejectMsg getRejectMsg() {
+  public RejectMsg CreateRejectMsg() {
     return new RejectMsg2();
   }
 
   @Override
-  public SetPrice getSetPrice() {
+  public SetPrice CreateSetPrice() {
     return new SetPrice2();
   }
 
   @Override
-  public ReadyMsg getReadyMsg() {
+  public ReadyMsg CreateReadyMsg() {
     return new ReadyMsg2();
   }
 
   @Override
-  public SetInitialValues getSetInitialValues() {
+  public SetInitialValues CreateSetInitialValues() {
     return new SetInitialValues2();
   }
 
   @Override
-  public PumpGasUnit getPumpGasUnit() {
+  public PumpGasUnit CreatePumpGasUnit() {
     return new PumpGasUnit2();
   }
 
   @Override
-  public GasPumpedMsg getGasPumpedMsg() {
+  public GasPumpedMsg CreateGasPumpedMsg() {
     return new GasPumpedMsg2();
   }
 
   @Override
-  public StopMsg getStopMsg() {
+  public StopMsg CreateStopMsg() {
     return new StopMsg2();
   }
 
   @Override
-  public PrintReceipt getPrintReceipt() {
+  public PrintReceipt CreatePrintReceipt() {
     return new PrintReceipt2();
   }
 
   @Override
-  public CancelMsg getCancelMsg() {
+  public CancelMsg CreateCancelMsg() {
     return new CancelMsg2();
   }
 
   @Override
-  public ReturnCash getReturnCash() {
+  public ReturnCash CreateReturnCash() {
     return new ReturnCash2();
   }
 
   @Override
-  public WrongPinMsg getWrongPinMsg() {
+  public WrongPinMsg CreateWrongPinMsg() {
     return new WrongPinMsg2();
   }
 
   @Override
-  public StorePin getStorePin() {
+  public StorePin CreateStorePin() {
     return new StorePin2();
   }
 
   @Override
-  public EnterPinMsg getEnterPinMsg() {
+  public EnterPinMsg CreateEnterPinMsg() {
     return new EnterPinMsg2();
   }
 
   @Override
-  public InitializeData getInitializeData() {
+  public InitializeData CreateInitializeData() {
     return new InitializeData2();
   }
 }

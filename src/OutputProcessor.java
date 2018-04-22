@@ -23,24 +23,24 @@ public class OutputProcessor {
   public void Initialize(AbstractFactory af){
     ds = af.getDataStore();
 
-    storePrices = af.getStorePrices();
-    payMsg = af.getPayMsg();
-    storeCash = af.getStoreCash();
-    displayMenu = af.getDisplayMenu();
-    rejectMsg = af.getRejectMsg();
-    setPrice = af.getSetPrice();
-    readyMsg = af.getReadyMsg();
-    setInitialValues = af.getSetInitialValues();
-    pumpGasUnit = af.getPumpGasUnit();
-    gasPumpedMsg = af.getGasPumpedMsg();
-    stopMsg = af.getStopMsg();
-    printReceipt = af.getPrintReceipt();
-    cancelMsg = af.getCancelMsg();
-    returnCash = af.getReturnCash();
-    wrongPinMsg = af.getWrongPinMsg();
-    storePin = af.getStorePin();
-    enterPinMsg = af.getEnterPinMsg();
-    initializeData = af.getInitializeData();
+    storePrices = af.CreateStorePrices();
+    payMsg = af.CreatePayMsg();
+    storeCash = af.CreateStoreCash();
+    displayMenu = af.CreateDisplayMenu();
+    rejectMsg = af.CreateRejectMsg();
+    setPrice = af.CreateSetPrice();
+    readyMsg = af.CreateReadyMsg();
+    setInitialValues = af.CreateSetInitialValues();
+    pumpGasUnit = af.CreatePumpGasUnit();
+    gasPumpedMsg = af.CreateGasPumpedMsg();
+    stopMsg = af.CreateStopMsg();
+    printReceipt = af.CreatePrintReceipt();
+    cancelMsg = af.CreateCancelMsg();
+    returnCash = af.CreateReturnCash();
+    wrongPinMsg = af.CreateWrongPinMsg();
+    storePin = af.CreateStorePin();
+    enterPinMsg = af.CreateEnterPinMsg();
+    initializeData = af.CreateInitializeData();
   }
 
   public void StorePrices() {

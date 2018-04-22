@@ -1,3 +1,6 @@
+/*
+  (Strategy Pattern) Strategy containing the implementation for GasPump1's StorePrices action.
+ */
 public class StorePrices1 extends StorePrices {
   @Override
   public void StorePrices(DataStore ds) {

@@ -1,3 +1,6 @@
+/*
+  (Strategy Pattern) Strategy containing the implementation for GasPump1's PumpGasUnit action.
+ */
 public class PumpGasUnit1 extends PumpGasUnit {
   @Override
   public void PumpGasUnit(DataStore ds) {

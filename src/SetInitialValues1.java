@@ -1,3 +1,6 @@
+/*
+  (Strategy Pattern) Strategy containing the implementation for GasPump1's SetInitialValues action.
+ */
 public class SetInitialValues1 extends SetInitialValues {
   @Override
   public void SetInitialValues(DataStore ds) {

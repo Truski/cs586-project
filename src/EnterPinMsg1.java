@@ -1,3 +1,6 @@
+/*
+  (Strategy Pattern) Strategy containing the implementation for GasPump1's EnterPinMsg action.
+ */
 public class EnterPinMsg1 extends EnterPinMsg {
   @Override
   public void EnterPinMsg() {

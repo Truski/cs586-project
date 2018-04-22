@@ -1,3 +1,6 @@
+/*
+  (Strategy Pattern) Strategy containing the implementation for GasPump1's RejectMsg action.
+ */
 public class RejectMsg1 extends RejectMsg {
   @Override
   public void RejectMsg() {

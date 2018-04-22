@@ -1,3 +1,6 @@
+/*
+  (Strategy Pattern) Strategy containing the implementation for GasPump1's GasPumpedMsg action.
+ */
 import java.util.Locale;
 
 public class GasPumpedMsg1 extends GasPumpedMsg {

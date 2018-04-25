@@ -1,5 +1,47 @@
 Deliverable #2: Class responsibilities and operations
 
+GasPump1
+This class is the first gas pump platform. It is used as an input processor in the MDA. It receives input from driver
+
+Operations:
+Initialize(AbstractFactory af): Initializes the gas pump with the given factory, and initializes the mdaefsm
+Activate (float a, float b) // the gas pump is activated where a is the price of the Regular gas
+                            // and b is the price of Diesel gas per gallon
+Start() //start the transaction
+PayCredit() // pay for gas by a credit card
+Reject() // credit card is rejected
+PayDebit(string p) // pay for gas by a debit card, where p is a pin #
+Pin(string x) // pin # is provided, where x represents the pin #
+Cancel() // cancel the transaction
+Approved() // credit card is approved
+Diesel() // Diesel gas is selected
+Regular() // Regular gas is selected
+StartPump() // start pumping gas
+PumpGallon() // one gallon of gas is disposed
+StopPump() // stop pumping gas
+FullTank() // Tank is full and pump is stopped
+
+GasPump2
+This class is the second gas pump platform. It is used as an input processor in the MDA. It receives input from driver
+
+Operations:
+Initialize(AbstractFactory af): Initializes the gas pump with the given factory, and initializes the mdaefsm
+Activate (float a, float b, float c) // the gas pump is activated where a is the price of Super gas, b is
+                                     //the price of Regular gas and c is the price of Premium gas per liter
+PayCash(int c) // pay for gas by cash, where c represents prepaid cash
+PayCredit() // pay for gas by a credit card
+Approved() // credit card is approved
+Reject() // credit card is rejected
+Cancel() // cancel the transaction
+Premium() // Premium gas is selected
+Regular() // Regular gas is selected
+Super() // Super gas is selected
+StartPump() // start pumping gas
+PumpLiter() // one liter of gas is disposed
+Stop() // stop pumping gas
+Receipt() // Receipt is requested
+NoReceipt() // No receipt
+
 AbstractFactory
 Creates the appropriate strategies and Data Store
 
@@ -15,7 +57,7 @@ Operations:
 - getDataStore: Returns the DataStore1 (creates it first if doesn't exist)
 - CreateStrategyX: For each X-namedStrategy, returns the action that GasPump1 takes in its OutputProcessor
 
-ConcreteFactory1
+ConcreteFactory2
 Creates strategies(actions) and data store for GasPump2
 
 Operations:
@@ -43,22 +85,22 @@ Operations:
 - get_data_X: For each data field X, returns the value of X. X values that DataStore2 does not have are not implemented
 - set_data_X: For each data field X, allows the user to set the value of X. X values that DataStore2 does not have are not implemented
 
-Driver
+Driver (Not included in class diagram)
 This class is responsible for the Main Method. It allows the user to select the gas pump and enter commands and parameters
 
 Operations:
 - main: The entry point for the software system
 
-MDAEFSM:
+MDAEFSM
 The Platform Independent Model in the MDA. Contains the state pattern (states and current state) and the data M (for determining prices)
 
 Operations:
 - getM, setM: Getters and setters for M
 - Initialize: Initializes the state machine by creating the states, setting the initial state, and initializing the output processor with the abstract factory
 - setState: allows state classes to change the state of the mdaefsm (decentralized state pattern)
-- Activate, Start, PayType, and the remaining operations: These are the meta events for the MDAEFSM, and they are forwarded to the current state
+- Activate, Start, PayType, and the remaining operations: These are the meta events for the MDAEFSM, and they are forwarded to the current state object
 
-OutputProcessor:
+OutputProcessor
 This class is the OP of the Model Driven Architecture. It is initialized via an abstract factory that returns the appropriate strategies. States have access to the OP and can call its actions
 
 Operations:
@@ -93,17 +135,18 @@ Operations:
 
 Classes S0 through S8
 These are the concrete states in the State pattern. They all override the abstract events in State. Based on the Platform Independent Model (MDAEFSM diagram), these states will call actions to occur and change the MDAEFSM's state
+Operations in these classes are the same as State since they inherit them. Only the state-event combinations that comply to our MDAEFSM diagram are implemented with code
 
 Operations:
-- Activate, Start, PayType, and the other operations: Events that the states can receive and respond to
+- Activate, Start, PayType, and the other operations: Events that the states can receive and do actions based upon
 
 The remaining classes (Strategies)
 Each strategy has 3 classes: 1 abstract class with one abstract method, and 2 classes that override the implementation (1 for each gas pump)
-Since in my design, both gas pumps has their own versions of menus and messages, there were 3 classes for each strategy instead of just 2 (sharing)
+Since in my design, both gas pumps has their own versions of menus and messages, there were 3 classes for each strategy instead of just 2 for some (sharing)
 The abstract strategies allow us to easily add new gas pumps and their implementations of actions. They are called via the output processor
 The concrete strategies are created based on the Concrete Factory in the Abstract Factory Pattern
 
-Here is a list of the strategies and their description of their operation:
+Here is a list of the strategies and their description of their operation (Detailed descriptions of what they do are pseudocode - please see source):
 
 Initialize: Initializes the OP by calling all of the Factory's CreateStrategyX methods, and gets the Data Store used by the system
 

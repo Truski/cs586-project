@@ -2,6 +2,7 @@
   (Abstract Factory Pattern) This class is the abstract part of the abstract factory pattern
   Regardless of the underlying Concrete Factory, an Abstract Factory
   can be passed around and its products created
+  For example, when OP of GP1 calls CreatePayMsg, it will return a PayMsg1, because it is a ConcreteFactory1
  */
 public abstract class AbstractFactory {
   DataStore dataStore;

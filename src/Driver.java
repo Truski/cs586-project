@@ -41,7 +41,9 @@ public class Driver {
       System.out.println("\t\td. FullTank()");
       System.out.println("\t\tq. Quit the program");
       System.out.println("\t\tPlease make a note of these operations");
+      System.out.println();
       System.out.println("\t\tGasPump-1 Execution");
+      System.out.println();
       while(ch != 'q'){
         System.out.println(" Select Operation");
         System.out.println("0-Activate,1-Start,2-PayCredit,3-Reject,4-PayDebit,5-Pin,6-Cancel,7-Approved");
@@ -49,15 +51,24 @@ public class Driver {
         ch = in.next().charAt(0);
         in.nextLine();
         System.out.println();
+
         switch(ch){
           case '0': { // Activate
             System.out.println("Operation: Activate(float a, float b)");
             System.out.println("Enter the value of parameter a:");
-            a = in.nextFloat();
-            in.nextLine();
+            try{
+              a = Float.parseFloat(in.nextLine());
+            } catch(Exception e){
+              System.out.println("Invalid input! Please enter a number.");
+              break;
+            }
             System.out.println("Enter the value of parameter b:");
-            b = in.nextFloat();
-            in.nextLine();
+            try{
+              b = Float.parseFloat(in.nextLine());
+            } catch(Exception e){
+              System.out.println("Invalid input! Please enter a number.");
+              break;
+            }
             gp1.Activate(a, b);
             break;
           }
@@ -175,22 +186,38 @@ public class Driver {
           case '0': { // Activate
             System.out.println("Operation: Activate(float a, float b, float c)");
             System.out.println("Enter the value of parameter a:");
-            a = in.nextFloat();
-            in.nextLine();
+            try{
+              a = Float.parseFloat(in.nextLine());
+            } catch(Exception e){
+              System.out.println("Invalid input! Please enter a number.");
+              break;
+            }
             System.out.println("Enter the value of parameter b:");
-            b = in.nextFloat();
-            in.nextLine();
+            try{
+              b = Float.parseFloat(in.nextLine());
+            } catch(Exception e){
+              System.out.println("Invalid input! Please enter a number.");
+              break;
+            }
             System.out.println("Enter the value of parameter c:");
-            c = in.nextFloat();
-            in.nextLine();
+            try{
+              c = Float.parseFloat(in.nextLine());
+            } catch(Exception e){
+              System.out.println("Invalid input! Please enter a number.");
+              break;
+            }
             gp2.Activate(a, b, c);
             break;
           }
           case '1': { // PayCash
             System.out.println("Operation: PayCash(int c)");
             System.out.println("Enter value of parameter c:");
-            cash = in.nextInt();
-            in.nextLine();
+            try{
+              cash = Integer.parseInt(in.nextLine());
+            } catch(Exception e){
+              System.out.println("Invalid input! Please enter an integer.");
+              break;
+            }
             gp2.PayCash(cash);
             break;
           }

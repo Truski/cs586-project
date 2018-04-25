@@ -146,11 +146,7 @@ Since in my design, both gas pumps has their own versions of menus and messages,
 The abstract strategies allow us to easily add new gas pumps and their implementations of actions. They are called via the output processor
 The concrete strategies are created based on the Concrete Factory in the Abstract Factory Pattern
 
-Here is a list of the strategies and their description of their operation (Detailed descriptions of what they do are pseudocode - please see source):
-
-Initialize: Initializes the OP by calling all of the Factory's CreateStrategyX methods, and gets the Data Store used by the system
-
-StorePrices, PayMsg, StoreCash, and the remaining operations: these are the meta actions, and forward the call to the strategy initialized
+Here is a list of the strategies and their description of their operation (Detailed descriptions of what they do are pseudocode - please see source code):
 
 StorePrices // stores price(s) for the gas from the temporary data store
 

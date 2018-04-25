@@ -7,8 +7,7 @@ public class GasPump1 {
   private DataStore d;
   private MDAEFSM m;
 
-  public GasPump1(){
-    AbstractFactory af = new ConcreteFactory1();
+  public void Initialize(AbstractFactory af){
     d = af.getDataStore();
     m = new MDAEFSM();
     m.Initialize(af);

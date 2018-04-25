@@ -20,6 +20,8 @@ public class Driver {
       float a, b;
       String s;
       GasPump1 gp1 = new GasPump1();
+      AbstractFactory af1 = new ConcreteFactory1();
+      gp1.Initialize(af1);
 
       System.out.println("\t\t\t\t\tGasPump-1");
       System.out.println("\t\tMENU of Operations");
@@ -138,6 +140,8 @@ public class Driver {
       float a, b, c;
       int cash;
       GasPump2 gp2 = new GasPump2();
+      AbstractFactory af2 = new ConcreteFactory2();
+      gp2.Initialize(af2);
 
       System.out.println("\t\t\t\t\tGasPump-2");
       System.out.println("\t\tMENU of Operations");
